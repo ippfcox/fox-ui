@@ -12,7 +12,7 @@
  */
 
 /* clang-format off */
-#if 0 /* Set this to "1" to enable content */
+#if 1 /* Set this to "1" to enable content */
 
 #ifndef LV_CONF_H
 #define LV_CONF_H
@@ -27,7 +27,7 @@
  *====================*/
 
 /** Color depth: 1 (I1), 8 (L8), 16 (RGB565), 24 (RGB888), 32 (XRGB8888) */
-#define LV_COLOR_DEPTH 16
+#define LV_COLOR_DEPTH 32
 
 /*=========================
    STDLIB WRAPPER SETTINGS
@@ -1032,12 +1032,12 @@
 #endif
 
 /** Built-in TTF decoder */
-#define LV_USE_TINY_TTF 0
+#define LV_USE_TINY_TTF 1
 #if LV_USE_TINY_TTF
     /* Enable loading TTF data from files */
-    #define LV_TINY_TTF_FILE_SUPPORT 0
-    #define LV_TINY_TTF_CACHE_GLYPH_CNT 128
-    #define LV_TINY_TTF_CACHE_KERNING_CNT 256
+    #define LV_TINY_TTF_FILE_SUPPORT 1
+    #define LV_TINY_TTF_CACHE_GLYPH_CNT 256
+    #define LV_TINY_TTF_CACHE_KERNING_CNT 512
 #endif
 
 /** Rlottie library */
@@ -1279,7 +1279,7 @@
 #endif
 
 /** Use X11 to open window on Linux desktop and handle mouse and keyboard */
-#define LV_USE_X11              0
+#define LV_USE_X11              1
 #if LV_USE_X11
     #define LV_X11_DIRECT_EXIT         1  /**< Exit application when all X11 windows have been closed */
     #define LV_X11_DOUBLE_BUFFER       1  /**< Use double buffers for rendering */
@@ -1449,10 +1449,10 @@
 *======================*/
 
 /** Enable examples to be built with the library. */
-#define LV_BUILD_EXAMPLES 1
+#define LV_BUILD_EXAMPLES 0
 
 /** Build the demos */
-#define LV_BUILD_DEMOS 1
+#define LV_BUILD_DEMOS 0
 
 /*===================
  * DEMO USAGE
