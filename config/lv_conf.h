@@ -12,7 +12,7 @@
  */
 
 /* clang-format off */
-#if 0 /* Set this to "1" to enable content */
+#if 1 /* Set this to "1" to enable content */
 
 #ifndef LV_CONF_H
 #define LV_CONF_H
@@ -56,7 +56,7 @@
 
 #if LV_USE_STDLIB_MALLOC == LV_STDLIB_BUILTIN
 /** Size of the pool `lv_malloc()` allocates from. Needs to be at least 2kB (2048). */
-#define LV_MEM_SIZE 65536
+#define LV_MEM_SIZE 1048576
 
 /** Place the pool at a fixed address instead of allocating it as a normal array.
  *  0: unused.
@@ -139,7 +139,7 @@
  *  - LV_COLOR_FORMAT_ARGB8888
  *  - LV_COLOR_FORMAT_ARGB8888_PREMULTIPLIED
  */
-#define LV_COLOR_FORMAT_DEFAULT LV_COLOR_FORMAT_RGB565
+#define LV_COLOR_FORMAT_DEFAULT LV_COLOR_FORMAT_XRGB8888
 
 /** 0: no adjustment, get the integer part of the result (round down)
  *  64: round up from x.75
@@ -1165,7 +1165,7 @@
 /** Load fonts by name, share them between widgets and free them by reference
  *  counting.
  */
-#define LV_USE_FONT_MANAGER 0
+#define LV_USE_FONT_MANAGER 1
 
 #if LV_USE_FONT_MANAGER
 /** Font name max length (characters) */
@@ -1177,7 +1177,7 @@
 #define LV_USE_IMGFONT 0
 
 /** FreeType */
-#define LV_USE_FREETYPE 0
+#define LV_USE_FREETYPE 1
 
 #if LV_USE_FREETYPE
 /** When enabled, FreeType will use LVGL's memory allocator and file system
@@ -1920,7 +1920,7 @@
 #endif /*LV_USE_OS == LV_OS_WINDOWS*/
 
 /** Open a window on an X11 desktop and read mouse and keyboard input. */
-#define LV_USE_X11 0
+#define LV_USE_X11 1
 
 #if LV_USE_X11
 /** Double buffering */
@@ -2534,7 +2534,7 @@
  *============================================================================*/
 
 /** Build examples */
-#define LV_BUILD_EXAMPLES 1
+#define LV_BUILD_EXAMPLES 0
 
 
 
@@ -2543,7 +2543,7 @@
  *============================================================================*/
 
 /** Build demos */
-#define LV_BUILD_DEMOS 1
+#define LV_BUILD_DEMOS 0
 
 #if LV_BUILD_DEMOS
 /** Benchmark demo
