@@ -20,6 +20,7 @@ target_link_libraries(${TARGET}
     PRIVATE
     spdlog::spdlog
     lvgl::lvgl
+    freetype
     util
     X11
 )
