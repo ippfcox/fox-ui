@@ -1021,7 +1021,7 @@
 #define LV_USE_BARCODE 0
 
 /** FreeType library */
-#define LV_USE_FREETYPE 0
+#define LV_USE_FREETYPE 1
 #if LV_USE_FREETYPE
     /** Let FreeType use LVGL memory and file porting */
     #define LV_FREETYPE_USE_LVGL_PORT 0
@@ -1233,7 +1233,7 @@
 #endif
 
 /** 1: Enable Font manager */
-#define LV_USE_FONT_MANAGER                     0
+#define LV_USE_FONT_MANAGER                     1
 #if LV_USE_FONT_MANAGER
 
 /**Font manager name max length*/
