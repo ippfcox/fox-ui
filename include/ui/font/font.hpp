@@ -1,5 +1,7 @@
 #include <memory>
 
+#include "font_descriptor.hpp"
+
 namespace ui
 {
     class FontData;
@@ -12,6 +14,8 @@ namespace ui
         bool Valid() const noexcept;
         int32_t Size() const noexcept;
         int32_t Weight() const noexcept;
+        FontStyle Style() const noexcept;
+        std::string Family() const noexcept;
 
     private:
         explicit Font(std::shared_ptr<FontData> data);

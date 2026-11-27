@@ -22,4 +22,15 @@ namespace ui
     {
         return data_ ? data_->Descriptor().weight : 0;
     }
+
+    FontStyle Font::Style() const noexcept
+    {
+        return data_ ? data_->Descriptor().style : FontStyle::None;
+    }
+
+    std::string Font::Family() const noexcept
+    {
+        return data_ ? data_->Descriptor().family : "";
+    }
+
 }

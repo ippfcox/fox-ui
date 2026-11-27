@@ -6,6 +6,7 @@ namespace ui
 {
     enum class FontStyle
     {
+        None,
         Normal,
         Italic,
     };
