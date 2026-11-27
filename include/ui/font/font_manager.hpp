@@ -17,8 +17,8 @@ namespace ui
         FontManager(const FontManager &) = delete;
         FontManager &operator=(const FontManager &) = delete;
 
-        FontManager(FontManager &&) noexcept;
-        FontManager &operator=(FontManager &&) noexcept;
+        FontManager(FontManager &&rhs) noexcept;
+        FontManager &operator=(FontManager &&rhs) noexcept;
 
         bool RegisterFamily(const FontFamily &family);
         bool UnregisterFamily(const std::string &name);

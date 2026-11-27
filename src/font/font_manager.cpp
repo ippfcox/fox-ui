@@ -13,19 +13,25 @@ namespace ui
     };
 
     FontManager::FontManager(std::shared_ptr<FontBackend> backend)
+        : impl_(std::make_unique<FontManagerImpl>())
     {
+        impl_->backend = backend;
     }
 
     FontManager::~FontManager()
     {
     }
 
-    FontManager::FontManager(FontManager &&) noexcept
+    FontManager::FontManager(FontManager &&rhs) noexcept
+        : impl_(std::move(rhs.impl_))
     {
     }
 
-    FontManager &FontManager::operator=(FontManager &&) noexcept
+    FontManager &FontManager::operator=(FontManager &&rhs) noexcept
     {
+        impl_ = std::move(rhs.impl_);
+
+        return *this;
     }
 
     bool FontManager::RegisterFamily(const FontFamily &family)
@@ -61,6 +67,9 @@ namespace ui
 
     bool FontManager::HasFamily(const std::string &name) const
     {
+        if (!impl_)
+            return false;
+
         return impl_->families.contains(name);
     }
 
