@@ -18,4 +18,5 @@ target_link_directories(${TARGET}
 target_link_libraries(${TARGET}
     PRIVATE
     fox
+    GTest::gtest_main
 )

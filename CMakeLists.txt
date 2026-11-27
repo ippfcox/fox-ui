@@ -16,7 +16,9 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/spdlog)
 add_subdirectory(src)
 
 if(BUILD_TESTS)
-    add_subdirectory(tests)
+    add_subdirectory(3rdparty/googletest)
+    enable_testing()
+    add_subdirectory(test)
 endif()
 
 if(BUILD_EXAMPLES)
