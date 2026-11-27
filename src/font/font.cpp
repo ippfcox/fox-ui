@@ -15,11 +15,11 @@ namespace ui
 
     int32_t Font::Size() const noexcept
     {
-        return data_ ? data_->Size() : 0;
+        return data_ ? data_->Descriptor().size : 0;
     }
 
     int32_t Font::Weight() const noexcept
     {
-        return data_ ? data_->Weight() : 0;
+        return data_ ? data_->Descriptor().weight : 0;
     }
 }

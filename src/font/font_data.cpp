@@ -2,8 +2,10 @@
 
 namespace ui
 {
-    FontData::FontData(int32_t size, int32_t weight)
-        : size_(size), weight_(weight)
+    FontData::FontData(FontDescriptor descriptor,
+        std::shared_ptr<FontBackend> backend,
+        std::shared_ptr<FontResource> resource)
+        : descriptor_(descriptor), backend_(backend), resource_(resource)
     {
     }
 
@@ -11,13 +13,8 @@ namespace ui
     {
     }
 
-    int32_t FontData::Size() const noexcept
+    const FontDescriptor &FontData::Descriptor() const noexcept
     {
-        return size_;
-    }
-
-    int32_t FontData::Weight() const noexcept
-    {
-        return weight_;
+        return descriptor_;
     }
 }
