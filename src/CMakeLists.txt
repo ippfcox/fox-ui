@@ -5,8 +5,9 @@ list(APPEND SRCS
     font/font.cpp
     font/font_data.cpp
     font/font_manager.cpp
-    font/lvgl_font_backend.cpp
-    font/lvgl_font_resource.cpp
+    lvgl/font/lvgl_font_backend.cpp
+    lvgl/font/lvgl_font_resource.cpp
+    lvgl/font/lvgl_font_access.cpp
 )
 
 add_library(${TARGET} ${SRCS})

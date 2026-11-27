@@ -19,6 +19,7 @@ namespace ui
         FontData &operator=(const FontData &) = delete;
 
         const FontDescriptor &Descriptor() const noexcept;
+        FontResource *Resource() const noexcept;
 
     private:
         FontDescriptor descriptor_;

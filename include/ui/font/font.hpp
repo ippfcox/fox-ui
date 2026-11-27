@@ -22,5 +22,6 @@ namespace ui
 
         std::shared_ptr<FontData> data_;
         friend class FontManager;
+        friend class LvglFontAccess;
     };
 }

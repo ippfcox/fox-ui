@@ -17,4 +17,9 @@ namespace ui
     {
         return descriptor_;
     }
+
+    FontResource *FontData::Resource() const noexcept
+    {
+        return resource_.get();
+    }
 }
